@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Updates | AgroCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/project.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html"><i class="fa-solid fa-seedling"></i> AgroCare</a>
+      <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-links">
+        <a href="../index.html#services">Services</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="disease.html">Disease</a>
+        <a href="policy.html">Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <p class="eyebrow">Local forecast</p>
+    <h1>Weather Updates</h1>
+    <p>Search a city to fetch live weather from the AgroCare backend using Open-Meteo data.</p>
+  </section>
+
+  <main class="page">
+    <div class="weather-card">
+      <h2><i class="fa-solid fa-cloud-sun"></i> Farm weather</h2>
+      <form id="weather-form" class="weather-search">
+        <input name="city" type="text" placeholder="Enter city name" autocomplete="address-level2">
+        <button type="submit">Get Weather</button>
+      </form>
+      <div id="weather-result" class="result-box">
+        Enter your city to see weather guidance.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AgroCare.</p>
+  </footer>
+  <script src="../jss/project.js"></script>
+</body>
+</html>

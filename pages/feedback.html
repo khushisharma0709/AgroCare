@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | AgroCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/project.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html"><i class="fa-solid fa-seedling"></i> AgroCare</a>
+      <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-links">
+        <a href="../index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <p class="eyebrow">Improve the project</p>
+    <h1>Feedback</h1>
+    <p>Tell us what should be improved in the AgroCare experience.</p>
+  </section>
+
+  <main class="page">
+    <form class="form-card" id="feedback-form">
+      <h2>Share feedback</h2>
+      <label>Your role
+        <select name="role" required>
+          <option value="">Select one</option>
+          <option>Farmer</option>
+          <option>Student</option>
+          <option>Teacher</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Rating
+        <select name="rating" required>
+          <option value="">Select rating</option>
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Needs improvement</option>
+        </select>
+      </label>
+      <label>Comments <textarea name="comments" required></textarea></label>
+      <button type="submit">Submit Feedback</button>
+      <p id="feedback-message"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AgroCare.</p>
+  </footer>
+  <script src="../jss/project.js"></script>
+</body>
+</html>

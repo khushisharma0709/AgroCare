@@ -1,0 +1,17 @@
+{
+  "name": "agrocare-api-project",
+  "version": "1.0.0",
+  "description": "AgroCare full working frontend with Node API backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:hf-model": "set USE_PUBLIC_HF_MODEL=true&& node server.js"
+  },
+  "keywords": [
+    "agriculture",
+    "weather",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT"
+}

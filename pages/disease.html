@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Disease Identifier | AgroCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/project.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html"><i class="fa-solid fa-seedling"></i> AgroCare</a>
+      <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-links">
+        <a href="../index.html#services">Services</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="weather.html">Weather</a>
+        <a href="policy.html">Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <p class="eyebrow">Crop health</p>
+    <h1>Disease Identifier</h1>
+    <p>Upload a crop image and send it to the AgroCare ML model endpoint for disease prediction.</p>
+  </section>
+
+  <main class="page">
+    <div class="upload-card">
+      <h2>Upload crop image</h2>
+      <p>Use a clear photo of the affected leaf, stem, or fruit. The backend expects a trained model through DISEASE_MODEL_URL or local model files.</p>
+      <label class="upload-zone" for="crop-photo">
+        <span><i class="fa-solid fa-cloud-arrow-up"></i> Choose an image</span>
+        <input id="crop-photo" type="file" accept="image/*" hidden>
+      </label>
+      <div id="diagnosis-result" class="result-box">
+        Your ML prediction will appear here.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AgroCare.</p>
+  </footer>
+  <script src="../jss/project.js"></script>
+</body>
+</html>
