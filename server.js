@@ -1,3 +1,5 @@
+require('dotenv').config();
+const token = process.env.API_KEY;
 const http = require("node:http");
 const fs = require("node:fs/promises");
 const path = require("node:path");
