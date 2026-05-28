@@ -185,33 +185,12 @@ async function loadCards(endpoint, key, container, renderCard) {
   } catch (error) {
     container.innerHTML = `<p class="error-text">${escapeHtml(error.message)}</p>`;
   }
-// }
-
-// async function apiFetch(endpoint, options = {}) {
-//   const response = await fetch(endpoint, options);
-//   const contentType = response.headers.get("content-type") || "";
-//   const data = contentType.includes("application/json") ? await response.json() : {};
-
-//   if (!response.ok) {
-//     throw new Error(data.error || "Request failed.");
-//   }
-
-//   return data;
-// }
-const API_BASE = "https://agrocare-6bn8.onrender.com";
+}
 
 async function apiFetch(endpoint, options = {}) {
-
-  const response = await fetch(
-    `${API_BASE}${endpoint}`,
-    options
-  );
-
+  const response = await fetch(endpoint, options);
   const contentType = response.headers.get("content-type") || "";
-
-  const data = contentType.includes("application/json")
-    ? await response.json()
-    : {};
+  const data = contentType.includes("application/json") ? await response.json() : {};
 
   if (!response.ok) {
     throw new Error(data.error || "Request failed.");
@@ -219,6 +198,7 @@ async function apiFetch(endpoint, options = {}) {
 
   return data;
 }
+
 function showError(element, message) {
   element.innerHTML = `<p class="error-text">${escapeHtml(message)}</p>`;
 }
