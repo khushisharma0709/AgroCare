@@ -188,9 +188,19 @@ async function loadCards(endpoint, key, container, renderCard) {
 }
 
 async function apiFetch(endpoint, options = {}) {
-  const response = await fetch(endpoint, options);
+
+  const API_BASE = "https://agrocare-6bn8.onrender.com";
+
+  const response = await fetch(
+    `${API_BASE}${endpoint}`,
+    options
+  );
+
   const contentType = response.headers.get("content-type") || "";
-  const data = contentType.includes("application/json") ? await response.json() : {};
+
+  const data = contentType.includes("application/json")
+    ? await response.json()
+    : {};
 
   if (!response.ok) {
     throw new Error(data.error || "Request failed.");
