@@ -188,11 +188,10 @@ async function loadCards(endpoint, key, container, renderCard) {
 }
 
 async function apiFetch(endpoint, options = {}) {
-
-  const API_BASE = "https://agrocare-6bn8.onrender.com";
+  const API_BASE = (window.AGROCARE_API_BASE_URL || "https://agrocare-6bn8.onrender.com").replace(/\/$/, "");
 
   const response = await fetch(
-    `${API_BASE}${endpoint}`,
+    endpoint.startsWith("/api/") ? `${API_BASE}${endpoint}` : endpoint,
     options
   );
 
